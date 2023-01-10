@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 # Create your views here.
 
 
@@ -24,4 +24,8 @@ def info(request):
     browser = request.META['HTTP_USER_AGENT']
     path = request.path
     return HttpResponse(f'{host} <p>{browser} <p> {path}')
+
+
+def e404(request):
+    return Http404('qweqwe')
 
