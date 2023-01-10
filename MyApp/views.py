@@ -18,3 +18,10 @@ def about(request, name, age):
 def contact(request):
     return HttpResponse('<H1>Контакты</H1>')
 
+
+def info(request):
+    host = request.META['HTTP_HOST']
+    browser = request.META['HTTP_USER_AGENT']
+    path = request.path
+    return HttpResponse(f'{host} <p>{browser} <p> {path}')
+

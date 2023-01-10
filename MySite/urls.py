@@ -20,5 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('about/', views.about, kwargs={'name': 'Мурат', 'age': 40}),
-    path('contact/', views.contact)
+    path('contact/', views.contact),
+    path('info/', views.info),
+
 ]
