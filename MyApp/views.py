@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, HttpResponseForbidden
 # Create your views here.
 
 
@@ -26,6 +26,6 @@ def info(request):
     return HttpResponse(f'{host} <p>{browser} <p> {path}')
 
 
-def e404(request):
-    return Http404('qweqwe')
+def e403(request):
+    return HttpResponseForbidden()
 

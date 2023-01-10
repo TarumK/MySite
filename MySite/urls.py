@@ -23,6 +23,6 @@ urlpatterns = [
     path('about/', views.about, kwargs={'name': 'Мурат', 'age': 40}),
     path('contact/', views.contact),
     path('info/', views.info),
-    path('e404/', views.e404),
+    path('e403/', views.e403),
 
 ]
