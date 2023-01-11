@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about/', views.about, kwargs={'name': 'Мурат', 'age': 40}),
     path('contact/', views.contact),
+    path('form/', views.form),
     path('info/', views.info),
     path('e403/', views.e403),
 

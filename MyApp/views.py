@@ -26,6 +26,11 @@ def info(request):
     return HttpResponse(f'{host} <p>{browser} <p> {path}')
 
 
+def form(request):
+    name = ['Murat', 'Beslan', 'Peter']
+    data = {'name': name}
+    return render(request, 'index.html', context=data)
+
 def e403(request):
     return HttpResponseForbidden()
 
