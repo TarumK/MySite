@@ -12,10 +12,18 @@
 {{ name|join:', ' }}
 <hr>
 <h1>
-{% for n in name %}
+    {% for n in name %}
 
-{{ n|add:' правка' }}
-<br>
-{% endfor %}
+    {{ n|add:' правка' }}
+    <br>
+    {% endfor %}
+
 </h1>
+<form metho="POST">
+    {% csrf_token %}
+<table>
+{{ form }}
+</table>
+    <input type="submit" value="Отправить">
+</form>
 </body>

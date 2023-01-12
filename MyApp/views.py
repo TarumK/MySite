@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseForbidden
+from .forms import UserForm
 # Create your views here.
 
 
@@ -29,7 +30,8 @@ def info(request):
 def form(request):
     name = ['Murat', 'Beslan', 'Peter']
     data = {'name': name}
-    return render(request, 'index.html', context=data)
+    user_form = UserForm()
+    return render(request, 'index.html', {"form": user_form})
 
 def e403(request):
     return HttpResponseForbidden()

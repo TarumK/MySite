@@ -19,7 +19,7 @@ from MyApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
+    path('', views.form, name='form'),
     path('about/', views.about, kwargs={'name': 'Мурат', 'age': 40}),
     path('contact/', views.contact),
     path('form/', views.form),
